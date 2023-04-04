@@ -1,6 +1,11 @@
 ## Get Started with DAIR-V2X
 
 ### Installation
+Conda environment
+```
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+conda install cudatoolkit=11.1 -c pytorch -c nvidia -c conda-forge
+```
 
 Required extertal packages are listed as follows:
 
@@ -9,6 +14,17 @@ mmdetection3d==0.17.1, pypcd
 ```
 
 Firstly follow the instructions [here](https://github.com/open-mmlab/mmdetection3d/blob/master/docs/en/getting_started.md) to install mmdetection3d. Make sure the version of mmdetection3d is exactly 0.17.1.
+
+```
+pip install openmim
+mim install mmcv-full==1.3.14
+mim install mmdet==2.14.0
+mim install mmsegmentation==0.14.1
+git clone https://github.com/open-mmlab/mmdetection3d.git
+cd mmdetection3d
+git checkout v0.17.1
+pip install -e .
+```
 
 Note that pypcd pip installing is not compatible with Python3. Therefore [a modified version](https://github.com/dimatura/pypcd) should be manually installed as followings.
 ```
